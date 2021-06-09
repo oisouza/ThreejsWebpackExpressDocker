@@ -1,7 +1,7 @@
 ### Preview 
 https://eduardosilva218.github.io/threejs-webpack-express/
 
-![](gif-preview.gif)
+![](readme-preview.gif)
 
 ### Install dependencies
 * npm install
