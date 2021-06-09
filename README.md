@@ -9,5 +9,5 @@ https://eduardosilva218.github.io/threejs-webpack-express/
 ### Build and run :rocket:
 * npm run start
 
-<h3 style="color=red"> If you have any errors related to the webpack, try installing it globally </h3> :x:
+### If you have any errors related to the webpack, try installing it globally :x:
 * npm install -g webpack webpack-cli
