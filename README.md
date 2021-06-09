@@ -1,4 +1,4 @@
-### Preview :camera:
+### Preview 
 https://eduardosilva218.github.io/threejs-webpack-express/
 
 ![](gif-preview.gif)
