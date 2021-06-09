@@ -1,5 +1,5 @@
 {
-  "name": "gameclient",
+  "name": "threejs-webpack-express",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -12,7 +12,7 @@
   "devDependencies": {
     "express": "^4.17.1",
     "html-webpack-plugin": "^5.3.1",
-    "repository": "https://github.com/eduardosilva218/gameclient",
+    "repository": "https://github.com/eduardosilva218/threejs-webpack-express",
     "three": "^0.129.0",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2"
