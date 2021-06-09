@@ -1,5 +1,5 @@
 ### Preview
-https://eduardosilva218.github.io/gameclient/
+https://eduardosilva218.github.io/threejs-webpack-express/
 
 ### Install dependencies
 * npm install
