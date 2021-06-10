@@ -4,13 +4,14 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "webpack && node ./server.js"
+    "start": "./node_modules/.bin/webpack && node ./server.js"
   },
   "keywords": [],
   "author": "eduardo",
   "license": "ISC",
   "devDependencies": {
     "express": "^4.17.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "repository": "https://github.com/eduardosilva218/threejs-webpack-express",
     "three": "^0.129.0",

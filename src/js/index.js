@@ -1,24 +1,27 @@
 import * as THREE from 'three'
+import kannaFile from '../assets/kanna.jpg';
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 25, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } );
-const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
+const texture = new THREE.TextureLoader().load( kannaFile );
+
+const geometry = new THREE.PlaneGeometry();
+const material = new THREE.MeshBasicMaterial( { map: texture } );
+const sprite = new THREE.Mesh( geometry, material );
+scene.add( sprite );
 
 camera.position.z = 5;
 
 const animate = function () {
     requestAnimationFrame( animate );
 
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    sprite.rotation.x += 0.01;
+    sprite.rotation.y += 0.01;
 
     renderer.render( scene, camera );
 };
