@@ -1,10 +1,10 @@
-### Preview 
+### Preview
 https://eduardosilva218.github.io/threejs-webpack-express/
 
 ![](readme-preview.gif)
 
-### Install dependencies
-* npm install
+### Build
+* docker-compose build
 
-### Build and run :rocket:
-* npm run start
+### Run
+* docker-compose up

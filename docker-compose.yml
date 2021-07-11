@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  threejs:
+    build:
+      context: .
+      dockerfile: dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 7000:7000
+    volumes:
+      - .:/home/app/threejs
+      - /home/app/threejs/node_modules
