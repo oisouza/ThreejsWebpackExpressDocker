@@ -16,3 +16,6 @@ Or
 
 ### Run with npm
 * `npm start` nodemon is in the project so you don't have to worry about rejoining the server.
+
+### To deploy ghpages of your origin use
+* `npm run deploy`

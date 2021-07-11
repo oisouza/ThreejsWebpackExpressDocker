@@ -20,7 +20,7 @@ camera.position.z = 5;
 const animate = function () {
     requestAnimationFrame( animate );
 
-    sprite.rotation.x += 0.10;
+    sprite.rotation.x += 0.01;
     sprite.rotation.y += 0.01;
 
     renderer.render( scene, camera );
