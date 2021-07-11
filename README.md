@@ -16,5 +16,3 @@ Or
 
 ### Run with npm
 * `npm start` nodemon is in the project so you don't have to worry about rejoining the server.
-Or
-* if you prefer use `node server.js`
