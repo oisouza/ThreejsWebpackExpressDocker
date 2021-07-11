@@ -4,10 +4,10 @@ https://eduardosilva218.github.io/threejs-webpack-express/
 ![](readme-preview.gif)
 
 ### Build with docker
-* docker-compose build
+* `docker-compose build`
 
 ### Run with docker
-* docker-compose up
+* `docker-compose up`
 
 Or
 
