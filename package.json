@@ -5,7 +5,7 @@
   "repository": "https://github.com/eduardosilva218/threejs-webpack-express",
   "private": true,
   "scripts": {
-    "deploy:github": "./node_modules/.bin/webpack && git subtree push --prefix dist origin dist",
+    "deploy:git": "./node_modules/.bin/webpack && git subtree push --prefix dist origin dist",
     "start": "./node_modules/.bin/npm-run-all --parallel watch:server watch:build",
     "watch:build": "./node_modules/.bin/webpack --watch",
     "watch:server": "./node_modules/.bin/nodemon ./server.js"
