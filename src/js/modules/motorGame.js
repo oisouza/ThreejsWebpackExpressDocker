@@ -6,12 +6,11 @@ class motorGame {
     $renderer
     domElement
 
-    constructor(spriteScripts, scene, cameraScript, renderer){
+    constructor(spriteScripts, scene, cameraScript, renderer) {
         this.$setup(spriteScripts, scene, cameraScript, renderer)
     }
 
-    $setup(spriteScripts, scene, cameraScript, renderer)
-    {        
+    $setup(spriteScripts, scene, cameraScript, renderer) {
         this.$spriteScripts = spriteScripts
         this.$scene = scene
         this.$cameraScript = cameraScript
@@ -22,8 +21,7 @@ class motorGame {
     load() {
         this.$cameraScript.load()
         this.$spriteScripts.forEach(
-            spriteScript => 
-            {
+            spriteScript => {
                 this.$scene.add(spriteScript.threeMesh);
                 spriteScript.load()
             })
@@ -37,10 +35,10 @@ class motorGame {
             this.$render()
         });
     }
-    
+
     $render() {
         this.$renderer.render(this.$scene, this.$cameraScript.threeCamera);
-    } 
+    }
 }
 
-export {motorGame}
+export { motorGame }
