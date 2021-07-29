@@ -6,8 +6,8 @@ class cameraScript {
 
     constructor(
         threeCamera,
-        load = () => { },
-        animate = () => { }) {
+        load,
+        animate) {
         this.threeCamera = threeCamera
         this.load = load
         this.animate = animate

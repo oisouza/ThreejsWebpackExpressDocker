@@ -5,8 +5,8 @@ class spriteScript {
 
     constructor(
         threeMesh,
-        load = () => { },
-        animate = () => { }) {
+        load,
+        animate) {
         this.threeMesh = threeMesh
         this.load = load
         this.animate = animate
