@@ -1,29 +1,41 @@
 import * as THREE from 'three'
 import kannaFile from '../assets/kanna.jpg';
+import { cameraScript } from './modules/cameraScript';
+import { motorGame } from './modules/motorGame';
+import { spriteScript } from './modules/spriteScript';
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 25, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
 
-const texture = new THREE.TextureLoader().load( kannaFile );
+const objectSprite = new THREE.Mesh( 
+    new THREE.PlaneGeometry(), 
+    new THREE.MeshBasicMaterial({ 
+        map: new THREE.TextureLoader().load( kannaFile )
+    })
+)
+const sprites = [
+    new spriteScript(
+        objectSprite,
+        () => {}, 
+        () => {
+            objectSprite.rotation.x += 0.01;
+            objectSprite.rotation.y += 0.01;
+        })
+]
 
-const geometry = new THREE.PlaneGeometry();
-const material = new THREE.MeshBasicMaterial( { map: texture } );
-const sprite = new THREE.Mesh( geometry, material );
-scene.add( sprite );
+const objectCamera = new THREE.PerspectiveCamera( 25, window.innerWidth / window.innerHeight, 0.1, 1000 )
+const camera = new cameraScript(
+    objectCamera,
+    () => { 
+        objectCamera.position.z = 5 
+    },
+    () => {})
 
-camera.position.z = 5;
+const motor = new motorGame(sprites, scene, camera, renderer)
 
-const animate = function () {
-    requestAnimationFrame( animate );
+document.body.appendChild( motor.domElement );
 
-    sprite.rotation.x += 0.01;
-    sprite.rotation.y += 0.01;
-
-    renderer.render( scene, camera );
-};
-
-animate();
+motor.load()
+motor.animate()
